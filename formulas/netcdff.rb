@@ -14,6 +14,7 @@ class NetcdfF < Formula
   deprecated_option "disable-cxx" => "without-cxx"
   deprecated_option "enable-cxx-compat" => "with-cxx-compat"
 
+  option "with-fortran","Add fortran dependency"
   option "without-cxx", "Don't compile C++ bindings"
   option "with-cxx-compat", "Compile C++ bindings for compatibility"
   option "without-check", "Disable checks (not recommended)"
