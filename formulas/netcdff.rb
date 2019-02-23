@@ -110,7 +110,7 @@ class Netcdff < Formula
     #   end
     # end
 
-    if build.with? "fortran"
+    # if build.with? "fortran"
       resource("fortran").stage do
         # fixes "error while loading shared libraries: libnetcdf.so.7".
         # see https://github.com/Homebrew/homebrew-science/issues/2521#issuecomment-121851582
@@ -121,7 +121,7 @@ class Netcdff < Formula
         system "make", "check" if build.with? "check"
         system "make", "install"
       end
-    end
+    # end
   end
 
   test do
