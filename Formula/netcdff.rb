@@ -1,4 +1,4 @@
-class netcdff < Formula
+class Netcdff < Formula
     desc "Libraries and data formats for array-oriented scientific data"
     homepage "https://www.unidata.ucar.edu/software/netcdf"
     url "https://www.unidata.ucar.edu/downloads/netcdf/ftp/netcdf-c-4.6.2.tar.gz"
