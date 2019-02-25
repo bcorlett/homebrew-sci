@@ -69,10 +69,16 @@ class Netcdf2 < Formula
 
     fortran_args = args.dup
     fortran_args << "-DENABLE_TESTS=OFF"
+    ENV.prepend "CPPFLAGS", "-I#{include}"
+    ENV.prepend "LDFLAGS", "-L#{lib}"
     resource("fortran").stage do
       mkdir "build-fortran" do
         # system "cmake", "..", "-DBUILD_SHARED_LIBS=ON", *fortran_args
-        system "make"
+        system "./configure", "--disable-dependency-tracking",
+                            "--enable-shared",
+                            "--enable-static",
+                            "--prefix=#{prefix}"
+        system "make", "check"
         system "make", "install"
         system "make", "clean"
         # system "cmake", "..", "-DBUILD_SHARED_LIBS=OFF", *fortran_args
