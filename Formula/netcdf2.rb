@@ -72,10 +72,11 @@ class Netcdf2 < Formula
     resource("fortran").stage do
       mkdir "build-fortran" do
         # system "cmake", "..", "-DBUILD_SHARED_LIBS=ON", *fortran_args
+        system "make"
         system "make", "install"
         system "make", "clean"
         # system "cmake", "..", "-DBUILD_SHARED_LIBS=OFF", *fortran_args
-        system "make"
+        # system "make"
         lib.install "fortran/libnetcdff.a"
       end
     end
