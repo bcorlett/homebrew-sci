@@ -71,7 +71,7 @@ class Netcdf2 < Formula
     fortran_args << "-DENABLE_TESTS=OFF"
     resource("fortran").stage do
       mkdir "build-fortran" do
-        system "cmake", "..", "-DBUILD_SHARED_LIBS=ON", *fortran_args
+        # system "cmake", "..", "-DBUILD_SHARED_LIBS=ON", *fortran_args
         system "make"
         system "make", "install"
         system "make", "clean"
