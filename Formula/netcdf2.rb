@@ -77,7 +77,7 @@ class Netcdf2 < Formula
         system "make", "clean"
         # system "cmake", "..", "-DBUILD_SHARED_LIBS=OFF", *fortran_args
         # system "make"
-        lib.install "fortran/libnetcdff.a"
+        # lib.install "fortran/libnetcdff.a"
       end
     end
 
